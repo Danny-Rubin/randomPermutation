@@ -16,10 +16,10 @@ public class randomPermutaion {
     public static void randPermute(int min, int max){
         int n = max - min + 1;
         int [] arr = new int[n];
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++){ //initialize an array with the numbers from the range, in order
             arr[i] = i + min;
         }
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++){ //transform the array into a random permutation using random swaps
             swap(arr, i, randomInRange(i, n-1));
         }
         System.out.println("random, uniform permutation:");
